@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Đăng Nhập</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .login-container input[type="text"]:focus,
+        .login-container input[type="password"]:focus {
+            border-color: #ff7e5f;
+        }
+
+        .login-container input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .login-container button {
+            background-color: #ff7e5f;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .login-container button:hover {
+            background-color: #feb47b;
+        }
+
+        .login-container .forgot-password {
+            display: block;
+            margin-top: 15px;
+            color: #ff7e5f;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .login-container .forgot-password:hover {
+            color: #feb47b;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h1>Đăng nhập</h1>
+    <form action="/login" method="post">
+        <div>
+            <label for="tenNguoiDung">Tên đăng nhập:</label>
+            <input type="text" id="tenNguoiDung" name="tenNguoiDung" required>
+        </div>
+        <div>
+            <label for="matKhau">Mật khẩu:</label>
+            <input type="password" id="matKhau" name="matKhau" required>
+        </div>
+        <div>
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Ghi nhớ tôi</label>
+        </div>
+        <button type="submit">Đăng nhập</button>
+    </form>
+    <a href="#" class="forgot-password">Quên mật khẩu?</a>
+</div>
+</body>
+</html>
